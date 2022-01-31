@@ -1,6 +1,6 @@
 @ECHO OFF
 
-CHOICE /C CS /M "What is the action you want to do? (C=Cancel --- S=Set)"
+CHOICE /C SC /M "YWhat is the action you want to do? (C=Iptal --- S=Ayarla)
 IF %ERRORLEVEL% EQU 1 GOTO :Set
 IF %ERRORLEVEL% EQU 2 GOTO :Cancel
 
@@ -16,7 +16,7 @@ IF %ERRORLEVEL% EQU 2 GOTO :Minute
 :Hour
 SET /A delay *=3600
 SHUTDOWN /s /t %delay%
-GOTO :Exit
+GOTO :ExitSet
 
 
 :Minute
